@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <title>Cảnh báo sạt lở trực tuyến - Landslide system</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../public/style.css">
+    <link rel="shortcut icon" type="image/png" href="../../public/static/warning.ico">
+</head>
+
+<body>
+    <!--Show the map-->
+    <div id="map" class="map-style"></div>
+
+    <!--The tools bar-->
+    <div id="toolsBar" class="tools-bar-style">
+        <div class="point-list">
+
+            <h1>Các điểm khảo sát</h1>
+
+            <div class="scroll">
+                <div class="container" style="display: none;"></div>
+                <button id="addPointButton" style="display: none;" class="add-point-button"
+                    onclick="addPointPopup()">Thêm mới</button>
+            </div>
+        </div>
+
+        <div class="point-infor">
+            <h1>Thông tin địa điểm</h1>
+            <div class="show-point-infor"></div>
+        </div>
+
+        <button id="hideButton" class="hide-button" onclick="hideToolsBar()">
+            <img id="hideButtonIcon" jstcache="12" src="//maps.gstatic.com/tactile/pane/arrow_left_2x.png"
+                class="hide-button-icon">
+        </button>
+    </div>
+
+    <!--Show popup to add a new point-->
+    <div id="popup" class="hide-popup">
+        <div class="point-input">
+            <input type="text" placeholder="Tên địa điểm" id="titleOfPoint" class="input-style">
+            <input type="number" placeholder="Kinh độ" id="lat" class="input-style" step="0.01">
+            <input type="number" placeholder="Vĩ độ" id="lng" class="input-style" step="0.01">
+        </div>
+
+        <div class="button-group">
+            <button id="add-button" onclick="addNewPoint()">Thêm</button>
+            <button id="cancel-button" onclick="hiddenPopup()">Hủy</button>
+        </div>
+    </div>
+
+    <script src="../../public/main.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=********&callback=init"></script>
+    </script>
+</body>
+
+</html>
