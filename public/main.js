@@ -104,14 +104,14 @@ function showInfor(name) {
             marker = new google.maps.Marker({
                 position: position,
                 map: map,
-                icon: './static/1.ico',
+                icon: './public/img/1.ico',
                 title: targetData.name
             });
         } else {
             marker = new google.maps.Marker({
                 position: position,
                 map: map,
-                icon: './static/2.ico',
+                icon: './public/img/2.ico',
                 title: targetData.name
             });
         }
