@@ -1,6 +1,3 @@
-icon_1 = require('./static/1.ico');
-icon_2 = require('./static/2.ico');
-
 var map;
 var marker;
 var mainData;
@@ -108,14 +105,14 @@ function showInfor(name) {
             marker = new google.maps.Marker({
                 position: position,
                 map: map,
-                icon: icon_1,
+                icon: './static/1.ico',
                 title: targetData.name
             });
         } else {
             marker = new google.maps.Marker({
                 position: position,
                 map: map,
-                icon: icon_2,
+                icon: './static/2.ico',
                 title: targetData.name
             });
         }
