@@ -72,10 +72,8 @@ function showInList(name, updatedAt) {
         '<img src="https://www.shareicon.net/data/512x512/2016/08/04/806892_interface_512x512.png" alt="ico" id="map-point-icon">' +
         '<b>' + name + '</b>';
 
-    if (check(updatedAt)) {
-        html += '<button id="cancel-button-child-online"></button>';
-        div.setAttribute('onclick', 'showInfor(\'' + name + '\')');
-    } else html += '<button id="cancel-button-child-offline"></button>';
+    html += '<button id="cancel-button-child-online"></button>';
+    div.setAttribute('onclick', 'showInfor(\'' + name + '\')');
 
     console.log(check(updatedAt));
     div.innerHTML = html;
@@ -86,6 +84,7 @@ function showInfor(name) {
     const targetData = mainData.find(item => item.name === name);
 
     if (targetData) {
+
         displayInfor(
             targetData.name,
             targetData.luongMua,
@@ -122,6 +121,7 @@ function showInfor(name) {
     } else if (document.querySelector('table')) removeTable();
 }
 function displayInfor(name, luongmua, doam, doam_1, donghieng, rain_time, satLo) {
+
     if (document.querySelector('table')) removeTable();
 
     let table = document.createElement('table');
